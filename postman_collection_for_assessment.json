@@ -1,0 +1,1679 @@
+{
+  "info": {
+    "_postman_id": "e62e1cb6-8bb0-4391-beb1-c0aeb2999157",
+    "name": "assessment exam",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17043939"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "see deliveries",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "9|ydluU75GnHQXAkeI1HlcBOCRA7j86BTlIWMcAAEa58f16725",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v2/deliveries",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v2",
+                "deliveries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "see deliveries",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Tenant-Key",
+                    "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v2/deliveries",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v2",
+                    "deliveries"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 07:18:11 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"tracking_number\": \"BD394258ZW\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Dhanmondi, Dhaka, 650 Hilpert Flat\",\n                \"lat\": \"23.8457527\",\n                \"lng\": \"90.3313256\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 194 Howe Alley\",\n                \"lat\": \"23.7510742\",\n                \"lng\": \"90.4293226\",\n                \"recipient\": \"Roxane Hill\",\n                \"phone\": \"01793203081\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-19T12:13:28.000000Z\",\n            \"created_at\": \"2026-06-15T07:57:20.000000Z\",\n            \"updated_at\": \"2026-06-19T12:13:28.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"tracking_number\": \"BD315435PR\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 30282 Mueller Wells Apt. 632\",\n                \"lat\": \"23.8877685\",\n                \"lng\": \"90.4776912\"\n            },\n            \"destination\": {\n                \"address\": \"Tejgaon, Dhaka, 35226 Jadyn Shore\",\n                \"lat\": \"23.8826073\",\n                \"lng\": \"90.3556063\",\n                \"recipient\": \"Magali Wyman\",\n                \"phone\": \"01683829495\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-23T15:56:23.000000Z\",\n            \"created_at\": \"2026-03-03T00:08:30.000000Z\",\n            \"updated_at\": \"2026-06-23T15:56:23.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"tracking_number\": \"BD373678QJ\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 95116 Royal Inlet\",\n                \"lat\": \"23.7745464\",\n                \"lng\": \"90.3341880\"\n            },\n            \"destination\": {\n                \"address\": \"Gulshan, Dhaka, 407 Kieran Plain\",\n                \"lat\": \"23.8103140\",\n                \"lng\": \"90.4544829\",\n                \"recipient\": \"Oswaldo Gorczany\",\n                \"phone\": \"01550190961\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-31T11:13:43.000000Z\",\n            \"updated_at\": \"2026-02-10T20:56:44.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"tracking_number\": \"BD598219LM\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 25216 Ernser Locks Suite 691\",\n                \"lat\": \"23.7510648\",\n                \"lng\": \"90.4234791\"\n            },\n            \"destination\": {\n                \"address\": \"Motijheel, Dhaka, 720 Dicki Trace Apt. 609\",\n                \"lat\": \"23.8572952\",\n                \"lng\": \"90.3892030\",\n                \"recipient\": \"Florencio Johnson I\",\n                \"phone\": \"01337491795\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-04-18T13:30:04.000000Z\",\n            \"updated_at\": \"2026-04-18T13:30:04.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"tracking_number\": \"BD944323TC\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Khilgaon, Dhaka, 50069 Camren River\",\n                \"lat\": \"23.7178694\",\n                \"lng\": \"90.3719349\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 5994 Blake Walks\",\n                \"lat\": \"23.6508180\",\n                \"lng\": \"90.3669724\",\n                \"recipient\": \"Horace Kovacek\",\n                \"phone\": \"01895566573\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-06-09T11:04:25.000000Z\",\n            \"updated_at\": \"2026-06-09T11:04:25.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"tracking_number\": \"BD940127EP\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 5200 Hand Forges Suite 893\",\n                \"lat\": \"23.8875449\",\n                \"lng\": \"90.3834923\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 36602 Ian Village Apt. 793\",\n                \"lat\": \"23.7492023\",\n                \"lng\": \"90.3766054\",\n                \"recipient\": \"Edmund Schoen III\",\n                \"phone\": \"01302301571\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-05-10T10:04:50.000000Z\",\n            \"updated_at\": \"2026-05-10T10:04:50.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"tracking_number\": \"BD513029HB\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Tejgaon, Dhaka, 50706 Amy Underpass Suite 442\",\n                \"lat\": \"23.6985895\",\n                \"lng\": \"90.3912158\"\n            },\n            \"destination\": {\n                \"address\": \"Khilgaon, Dhaka, 66534 Stark Knoll Apt. 486\",\n                \"lat\": \"23.6686621\",\n                \"lng\": \"90.4090782\",\n                \"recipient\": \"Chance Grady\",\n                \"phone\": \"01348167843\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-07T00:01:35.000000Z\",\n            \"updated_at\": \"2026-02-07T00:01:35.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"tracking_number\": \"BD009894RV\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Tejgaon, Dhaka, 360 Benjamin Creek Apt. 976\",\n                \"lat\": \"23.7786591\",\n                \"lng\": \"90.3947807\"\n            },\n            \"destination\": {\n                \"address\": \"Banani, Dhaka, 16111 Beer Camp\",\n                \"lat\": \"23.8209830\",\n                \"lng\": \"90.3456066\",\n                \"recipient\": \"Prof. Melba Hintz\",\n                \"phone\": \"01944204356\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-02T00:52:27.000000Z\",\n            \"created_at\": \"2026-05-20T15:03:18.000000Z\",\n            \"updated_at\": \"2026-06-02T00:52:27.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"tracking_number\": \"BD749178BD\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 28907 Quitzon Bypass Apt. 411\",\n                \"lat\": \"23.8339336\",\n                \"lng\": \"90.4278114\"\n            },\n            \"destination\": {\n                \"address\": \"Tejgaon, Dhaka, 58773 Melvina Mountains Apt. 397\",\n                \"lat\": \"23.8827557\",\n                \"lng\": \"90.3987544\",\n                \"recipient\": \"Brady Jaskolski III\",\n                \"phone\": \"01815900724\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-05-02T02:41:46.000000Z\",\n            \"updated_at\": \"2026-06-09T09:07:09.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"tracking_number\": \"BD713028NU\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Mohammadpur, Dhaka, 294 Metz Ranch Apt. 426\",\n                \"lat\": \"23.6916728\",\n                \"lng\": \"90.3564037\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 5814 Oma Mews\",\n                \"lat\": \"23.8194412\",\n                \"lng\": \"90.3475021\",\n                \"recipient\": \"Zaria Zieme\",\n                \"phone\": \"01851202198\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-03-19T15:57:58.000000Z\",\n            \"updated_at\": \"2026-04-29T02:29:25.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"tracking_number\": \"BD850525BC\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Gulshan, Dhaka, 388 Parisian Courts\",\n                \"lat\": \"23.8849201\",\n                \"lng\": \"90.3732193\"\n            },\n            \"destination\": {\n                \"address\": \"Banani, Dhaka, 45067 Arturo Meadows Suite 561\",\n                \"lat\": \"23.7515625\",\n                \"lng\": \"90.3359400\",\n                \"recipient\": \"Mr. Lee Nikolaus II\",\n                \"phone\": \"01849100242\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-17T13:50:27.000000Z\",\n            \"created_at\": \"2026-03-28T07:57:32.000000Z\",\n            \"updated_at\": \"2026-06-17T13:50:27.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"tracking_number\": \"BD606153ON\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 42454 Kane Wall Apt. 435\",\n                \"lat\": \"23.8900599\",\n                \"lng\": \"90.3811756\"\n            },\n            \"destination\": {\n                \"address\": \"Bashundhara, Dhaka, 68917 Kiara Creek\",\n                \"lat\": \"23.8838589\",\n                \"lng\": \"90.3763570\",\n                \"recipient\": \"Meta Kovacek\",\n                \"phone\": \"01379463473\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-21T01:26:42.000000Z\",\n            \"updated_at\": \"2026-02-21T01:26:42.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"tracking_number\": \"BD637338JS\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Lalbagh, Dhaka, 987 Walter Spurs\",\n                \"lat\": \"23.6536292\",\n                \"lng\": \"90.4234394\"\n            },\n            \"destination\": {\n                \"address\": \"Wari, Dhaka, 1220 Hintz Underpass Apt. 264\",\n                \"lat\": \"23.8123488\",\n                \"lng\": \"90.3692993\",\n                \"recipient\": \"Tamara Purdy\",\n                \"phone\": \"01833139173\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-11T12:10:31.000000Z\",\n            \"updated_at\": \"2026-06-11T21:09:11.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"tracking_number\": \"BD767138FT\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 3862 Bins Route Apt. 449\",\n                \"lat\": \"23.8931866\",\n                \"lng\": \"90.3760120\"\n            },\n            \"destination\": {\n                \"address\": \"Lalbagh, Dhaka, 8859 Gerard Manors\",\n                \"lat\": \"23.7906928\",\n                \"lng\": \"90.4424738\",\n                \"recipient\": \"Mr. Louisa Rempel\",\n                \"phone\": \"01507785216\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-02T04:03:58.000000Z\",\n            \"updated_at\": \"2026-02-20T17:25:16.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"tracking_number\": \"BD480816HC\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 20046 Pink Ports Suite 320\",\n                \"lat\": \"23.7914006\",\n                \"lng\": \"90.4990716\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 33594 Pagac Garden\",\n                \"lat\": \"23.7082478\",\n                \"lng\": \"90.4507012\",\n                \"recipient\": \"Yoshiko Schmitt\",\n                \"phone\": \"01771659915\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-29T16:20:44.000000Z\",\n            \"updated_at\": \"2026-01-29T16:20:44.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"tracking_number\": \"BD005877MC\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 927 Beer Lodge Apt. 988\",\n                \"lat\": \"23.7502768\",\n                \"lng\": \"90.3766054\"\n            },\n            \"destination\": {\n                \"address\": \"Dhanmondi, Dhaka, 7704 Oberbrunner Motorway\",\n                \"lat\": \"23.6768865\",\n                \"lng\": \"90.4745805\",\n                \"recipient\": \"Carlie Grady\",\n                \"phone\": \"01826908126\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-04T09:12:14.000000Z\",\n            \"updated_at\": \"2026-02-06T06:32:49.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"tracking_number\": \"BD420081MW\",\n            \"status\": \"pending\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 33267 Brycen River\",\n                \"lat\": \"23.7369578\",\n                \"lng\": \"90.4523103\"\n            },\n            \"destination\": {\n                \"address\": \"Bashundhara, Dhaka, 918 Augustine Loaf Apt. 296\",\n                \"lat\": \"23.7954023\",\n                \"lng\": \"90.4621766\",\n                \"recipient\": \"Miss Destini Kassulke PhD\",\n                \"phone\": \"01785364810\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-21T07:37:04.000000Z\",\n            \"updated_at\": \"2026-02-21T07:37:04.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"tracking_number\": \"BD817889CO\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Gulshan, Dhaka, 495 Pierre Shores Apt. 325\",\n                \"lat\": \"23.7953262\",\n                \"lng\": \"90.4545969\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 7465 Odell Road\",\n                \"lat\": \"23.6912482\",\n                \"lng\": \"90.3764161\",\n                \"recipient\": \"Prof. Neil Howe DDS\",\n                \"phone\": \"01857958793\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2025-12-28T23:01:17.000000Z\",\n            \"updated_at\": \"2026-02-27T21:37:09.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"tracking_number\": \"BD178568YS\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 1948 Bartell Expressway\",\n                \"lat\": \"23.6609892\",\n                \"lng\": \"90.3769524\"\n            },\n            \"destination\": {\n                \"address\": \"Wari, Dhaka, 874 Champlin Spur\",\n                \"lat\": \"23.8805168\",\n                \"lng\": \"90.4468807\",\n                \"recipient\": \"Caesar Renner\",\n                \"phone\": \"01808073967\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-06-01T19:34:17.000000Z\",\n            \"updated_at\": \"2026-06-01T19:34:17.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"tracking_number\": \"BD204972PF\",\n            \"status\": \"pending\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Lalbagh, Dhaka, 475 Doyle Oval\",\n                \"lat\": \"23.8518605\",\n                \"lng\": \"90.4995394\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 23076 Hansen Haven\",\n                \"lat\": \"23.6908271\",\n                \"lng\": \"90.3881060\",\n                \"recipient\": \"Dr. Malcolm Larson I\",\n                \"phone\": \"01380592975\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-03-20T17:00:54.000000Z\",\n            \"updated_at\": \"2026-03-20T17:00:54.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": null,\n        \"last\": null,\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/v2/deliveries?cursor=eyJpZCI6MjAsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0\"\n    },\n    \"meta\": {\n        \"path\": \"http://127.0.0.1:8000/api/v2/deliveries\",\n        \"per_page\": 20,\n        \"next_cursor\": \"eyJpZCI6MjAsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0\",\n        \"prev_cursor\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "admin@example.com",
+                  "type": "text",
+                  "uuid": "40bf359e-e9ca-4eb7-bd06-ebf3d16e64f8"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "43c5ed85-a9d4-42ef-83da-b01c339a9939"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "email",
+                      "value": "admin@example.com",
+                      "type": "text",
+                      "uuid": "40bf359e-e9ca-4eb7-bd06-ebf3d16e64f8"
+                    },
+                    {
+                      "key": "password",
+                      "value": "password",
+                      "type": "text",
+                      "uuid": "43c5ed85-a9d4-42ef-83da-b01c339a9939"
+                    }
+                  ],
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/login",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 05:58:56 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"token\": \"3|BWALxwKd0sheTuCGScX8WW9hsNrcaakCYAF5UcIP0ca57ac7\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Admin User\",\n        \"email\": \"admin@example.com\",\n        \"role\": \"admin\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "show first delivery",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/deliveries/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "deliveries",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "show first delivery",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/deliveries/1",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "deliveries",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 05:58:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "27"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"tracking_number\": \"BD394258ZW\",\n        \"status\": \"delivered\",\n        \"user_id\": 1,\n        \"driver_id\": null,\n        \"recipient_name\": \"Roxane Hill\",\n        \"recipient_phone\": \"01793203081\",\n        \"pickup_address\": \"Dhanmondi, Dhaka, 650 Hilpert Flat\",\n        \"delivery_address\": \"Mohammadpur, Dhaka, 194 Howe Alley\",\n        \"scheduled_at\": null,\n        \"delivered_at\": \"2026-06-19T12:13:28.000000Z\",\n        \"created_at\": \"2026-06-15T07:57:20.000000Z\",\n        \"updated_at\": \"2026-06-19T12:13:28.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "import csv for deliveries",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "0f70d8d3-6889-45f3-88aa-0a3e42afda11",
+                  "src": "/Users/shakil/Desktop/ASSESMENT/delivery-management/deliveries.csv"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/imports",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "imports"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "import csv for deliveries",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "uuid": "0f70d8d3-6889-45f3-88aa-0a3e42afda11",
+                      "src": "/Users/shakil/Desktop/ASSESMENT/delivery-management/deliveries.csv"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/imports",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "imports"
+                  ]
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:25:16 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Import queued successfully.\",\n    \"import_job_id\": 5,\n    \"status_url\": \"http://127.0.0.1:8000/api/v1/imports/5\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "show imports sttus",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/imports/6",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "imports",
+                "6"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "show imports sttus",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/imports/5",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "imports",
+                    "5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:25:20 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"status\": \"completed\",\n    \"progress\": 0,\n    \"total_rows\": 0,\n    \"processed_rows\": 1,\n    \"failed_rows\": 0,\n    \"errors\": [],\n    \"started_at\": \"2026-06-27T06:25:17.000000Z\",\n    \"completed_at\": \"2026-06-27T06:25:17.000000Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "reportes weekly",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/reports/weekly",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "weekly"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "reportes weekly",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/reports/weekly",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "reports",
+                    "weekly"
+                  ]
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:26:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Report generation queued.\",\n    \"report_key\": \"903bf87a-9cba-4022-8043-6c8c17e640ee\",\n    \"status_url\": \"http://127.0.0.1:8000/api/v1/reports/903bf87a-9cba-4022-8043-6c8c17e640ee/status\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "report generation status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/reports/5785ea77-c41a-4e65-a735-2efe8b668664/status",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "5785ea77-c41a-4e65-a735-2efe8b668664",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "report generation status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/reports/903bf87a-9cba-4022-8043-6c8c17e640ee/status",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "reports",
+                    "903bf87a-9cba-4022-8043-6c8c17e640ee",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:27:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"ready\",\n    \"data\": [\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-03-23 00:00:00\",\n            \"total_deliveries\": 14,\n            \"success_rate\": \"21.43\",\n            \"avg_delivery_hours\": \"1982.38\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-03-30 00:00:00\",\n            \"total_deliveries\": 25,\n            \"success_rate\": \"40.00\",\n            \"avg_delivery_hours\": \"1644.82\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-04-06 00:00:00\",\n            \"total_deliveries\": 34,\n            \"success_rate\": \"23.53\",\n            \"avg_delivery_hours\": \"1240.61\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-04-13 00:00:00\",\n            \"total_deliveries\": 43,\n            \"success_rate\": \"13.95\",\n            \"avg_delivery_hours\": \"1271.81\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-04-20 00:00:00\",\n            \"total_deliveries\": 35,\n            \"success_rate\": \"22.86\",\n            \"avg_delivery_hours\": \"982.02\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-04-27 00:00:00\",\n            \"total_deliveries\": 46,\n            \"success_rate\": \"17.39\",\n            \"avg_delivery_hours\": \"835.82\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-05-04 00:00:00\",\n            \"total_deliveries\": 32,\n            \"success_rate\": \"28.13\",\n            \"avg_delivery_hours\": \"929.25\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-05-11 00:00:00\",\n            \"total_deliveries\": 39,\n            \"success_rate\": \"28.21\",\n            \"avg_delivery_hours\": \"812.73\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-05-18 00:00:00\",\n            \"total_deliveries\": 41,\n            \"success_rate\": \"14.63\",\n            \"avg_delivery_hours\": \"600.82\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-05-25 00:00:00\",\n            \"total_deliveries\": 47,\n            \"success_rate\": \"19.15\",\n            \"avg_delivery_hours\": \"562.58\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-06-01 00:00:00\",\n            \"total_deliveries\": 39,\n            \"success_rate\": \"12.82\",\n            \"avg_delivery_hours\": \"452.73\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-06-08 00:00:00\",\n            \"total_deliveries\": 44,\n            \"success_rate\": \"15.91\",\n            \"avg_delivery_hours\": \"291.94\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-06-15 00:00:00\",\n            \"total_deliveries\": 41,\n            \"success_rate\": \"12.20\",\n            \"avg_delivery_hours\": \"171.17\"\n        },\n        {\n            \"__PHP_Incomplete_Class_Name\": \"stdClass\",\n            \"week\": \"2026-06-22 00:00:00\",\n            \"total_deliveries\": 29,\n            \"success_rate\": \"3.45\",\n            \"avg_delivery_hours\": \"74.58\"\n        }\n    ],\n    \"generated_at\": \"2026-06-27T06:26:50.504917Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "routes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer $TOKEN",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Uttara → Motijheel Express\",\n    \"description\": \"North-south commuter route\",\n    \"waypoints\": [\n      {\"lat\": 23.8759, \"lng\": 90.3795, \"address\": \"Uttara Sector 7, Dhaka\"},\n      {\"lat\": 23.7461, \"lng\": 90.3742, \"address\": \"Dhanmondi 27, Dhaka\"},\n      {\"lat\": 23.7224, \"lng\": 90.4088, \"address\": \"Motijheel, Dhaka\"}\n    ]\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/routes",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "routes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "routes",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer $TOKEN"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Renent-Key",
+                    "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Uttara → Motijheel Express\",\n    \"description\": \"North-south commuter route\",\n    \"waypoints\": [\n      {\"lat\": 23.8759, \"lng\": 90.3795, \"address\": \"Uttara Sector 7, Dhaka\"},\n      {\"lat\": 23.7461, \"lng\": 90.3742, \"address\": \"Dhanmondi 27, Dhaka\"},\n      {\"lat\": 23.7224, \"lng\": 90.4088, \"address\": \"Motijheel, Dhaka\"}\n    ]\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/routes",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "routes"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:36:21 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "27"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 2,\n        \"tenant_id\": 1,\n        \"name\": \"Uttara → Motijheel Express\",\n        \"description\": \"North-south commuter route\",\n        \"waypoints\": [\n            {\n                \"lat\": 23.8759,\n                \"lng\": 90.3795,\n                \"address\": \"Uttara Sector 7, Dhaka\"\n            },\n            {\n                \"lat\": 23.7461,\n                \"lng\": 90.3742,\n                \"address\": \"Dhanmondi 27, Dhaka\"\n            },\n            {\n                \"lat\": 23.7224,\n                \"lng\": 90.4088,\n                \"address\": \"Motijheel, Dhaka\"\n            }\n        ],\n        \"is_active\": null,\n        \"created_at\": \"2026-06-27T06:36:21.000000Z\",\n        \"updated_at\": \"2026-06-27T06:36:21.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "export csv for deliveries",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "0f70d8d3-6889-45f3-88aa-0a3e42afda11",
+                  "src": "/Users/shakil/Desktop/ASSESMENT/delivery-management/deliveries.csv"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/exports/deliveries",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "exports",
+                "deliveries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "export csv for deliveries",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "uuid": "0f70d8d3-6889-45f3-88aa-0a3e42afda11",
+                      "src": "/Users/shakil/Desktop/ASSESMENT/delivery-management/deliveries.csv"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/exports/deliveries",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "exports",
+                    "deliveries"
+                  ]
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:30:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Export queued.\",\n    \"export_key\": \"d7968527-f565-4028-9dc6-6d16c4caaf6f\",\n    \"status_url\": \"http://127.0.0.1:8000/api/v1/exports/d7968527-f565-4028-9dc6-6d16c4caaf6f/status\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "export status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/exports/c9710bb1-1df8-4b82-afc4-a9d5bbdd0973/status",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "v1",
+                "exports",
+                "c9710bb1-1df8-4b82-afc4-a9d5bbdd0973",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "export status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/v1/exports/d7968527-f565-4028-9dc6-6d16c4caaf6f/status",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "exports",
+                    "d7968527-f565-4028-9dc6-6d16c4caaf6f",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:31:10 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Deprecation",
+                  "value": "true"
+                },
+                {
+                  "key": "Sunset",
+                  "value": "Sat, 01 Jan 2027 00:00:00 GMT"
+                },
+                {
+                  "key": "Link",
+                  "value": "<https://api.example.com/v2>; rel=\"successor-version\""
+                },
+                {
+                  "key": "Warning",
+                  "value": "299 - \"API v1 is deprecated. Please migrate to v2.\""
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"ready\",\n    \"url\": \"http://localhost:8000/storage/exports/deliveries-1-20260627-063044.csv?expires=1782545445&signature=b74d82a91468eb9fa4bac2940cf5c98228f69900d5df89d188e4d87c1780fb53\",\n    \"path\": \"exports/deliveries-1-20260627-063044.csv\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "v2",
+      "item": [
+        {
+          "name": "see deliveries",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/deliveries",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "deliveries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "see deliveries",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE}}/deliveries",
+                  "host": [
+                    "{{BASE}}"
+                  ],
+                  "path": [
+                    "deliveries"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:46:51 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"tracking_number\": \"BD394258ZW\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Dhanmondi, Dhaka, 650 Hilpert Flat\",\n                \"lat\": \"23.8457527\",\n                \"lng\": \"90.3313256\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 194 Howe Alley\",\n                \"lat\": \"23.7510742\",\n                \"lng\": \"90.4293226\",\n                \"recipient\": \"Roxane Hill\",\n                \"phone\": \"01793203081\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-19T12:13:28.000000Z\",\n            \"created_at\": \"2026-06-15T07:57:20.000000Z\",\n            \"updated_at\": \"2026-06-19T12:13:28.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"tracking_number\": \"BD315435PR\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 30282 Mueller Wells Apt. 632\",\n                \"lat\": \"23.8877685\",\n                \"lng\": \"90.4776912\"\n            },\n            \"destination\": {\n                \"address\": \"Tejgaon, Dhaka, 35226 Jadyn Shore\",\n                \"lat\": \"23.8826073\",\n                \"lng\": \"90.3556063\",\n                \"recipient\": \"Magali Wyman\",\n                \"phone\": \"01683829495\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-23T15:56:23.000000Z\",\n            \"created_at\": \"2026-03-03T00:08:30.000000Z\",\n            \"updated_at\": \"2026-06-23T15:56:23.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"tracking_number\": \"BD373678QJ\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 95116 Royal Inlet\",\n                \"lat\": \"23.7745464\",\n                \"lng\": \"90.3341880\"\n            },\n            \"destination\": {\n                \"address\": \"Gulshan, Dhaka, 407 Kieran Plain\",\n                \"lat\": \"23.8103140\",\n                \"lng\": \"90.4544829\",\n                \"recipient\": \"Oswaldo Gorczany\",\n                \"phone\": \"01550190961\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-31T11:13:43.000000Z\",\n            \"updated_at\": \"2026-02-10T20:56:44.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"tracking_number\": \"BD598219LM\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 25216 Ernser Locks Suite 691\",\n                \"lat\": \"23.7510648\",\n                \"lng\": \"90.4234791\"\n            },\n            \"destination\": {\n                \"address\": \"Motijheel, Dhaka, 720 Dicki Trace Apt. 609\",\n                \"lat\": \"23.8572952\",\n                \"lng\": \"90.3892030\",\n                \"recipient\": \"Florencio Johnson I\",\n                \"phone\": \"01337491795\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-04-18T13:30:04.000000Z\",\n            \"updated_at\": \"2026-04-18T13:30:04.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"tracking_number\": \"BD944323TC\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Khilgaon, Dhaka, 50069 Camren River\",\n                \"lat\": \"23.7178694\",\n                \"lng\": \"90.3719349\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 5994 Blake Walks\",\n                \"lat\": \"23.6508180\",\n                \"lng\": \"90.3669724\",\n                \"recipient\": \"Horace Kovacek\",\n                \"phone\": \"01895566573\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-06-09T11:04:25.000000Z\",\n            \"updated_at\": \"2026-06-09T11:04:25.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"tracking_number\": \"BD940127EP\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 5200 Hand Forges Suite 893\",\n                \"lat\": \"23.8875449\",\n                \"lng\": \"90.3834923\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 36602 Ian Village Apt. 793\",\n                \"lat\": \"23.7492023\",\n                \"lng\": \"90.3766054\",\n                \"recipient\": \"Edmund Schoen III\",\n                \"phone\": \"01302301571\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-05-10T10:04:50.000000Z\",\n            \"updated_at\": \"2026-05-10T10:04:50.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"tracking_number\": \"BD513029HB\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Tejgaon, Dhaka, 50706 Amy Underpass Suite 442\",\n                \"lat\": \"23.6985895\",\n                \"lng\": \"90.3912158\"\n            },\n            \"destination\": {\n                \"address\": \"Khilgaon, Dhaka, 66534 Stark Knoll Apt. 486\",\n                \"lat\": \"23.6686621\",\n                \"lng\": \"90.4090782\",\n                \"recipient\": \"Chance Grady\",\n                \"phone\": \"01348167843\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-07T00:01:35.000000Z\",\n            \"updated_at\": \"2026-02-07T00:01:35.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"tracking_number\": \"BD009894RV\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Tejgaon, Dhaka, 360 Benjamin Creek Apt. 976\",\n                \"lat\": \"23.7786591\",\n                \"lng\": \"90.3947807\"\n            },\n            \"destination\": {\n                \"address\": \"Banani, Dhaka, 16111 Beer Camp\",\n                \"lat\": \"23.8209830\",\n                \"lng\": \"90.3456066\",\n                \"recipient\": \"Prof. Melba Hintz\",\n                \"phone\": \"01944204356\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-02T00:52:27.000000Z\",\n            \"created_at\": \"2026-05-20T15:03:18.000000Z\",\n            \"updated_at\": \"2026-06-02T00:52:27.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"tracking_number\": \"BD749178BD\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 28907 Quitzon Bypass Apt. 411\",\n                \"lat\": \"23.8339336\",\n                \"lng\": \"90.4278114\"\n            },\n            \"destination\": {\n                \"address\": \"Tejgaon, Dhaka, 58773 Melvina Mountains Apt. 397\",\n                \"lat\": \"23.8827557\",\n                \"lng\": \"90.3987544\",\n                \"recipient\": \"Brady Jaskolski III\",\n                \"phone\": \"01815900724\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-05-02T02:41:46.000000Z\",\n            \"updated_at\": \"2026-06-09T09:07:09.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"tracking_number\": \"BD713028NU\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Mohammadpur, Dhaka, 294 Metz Ranch Apt. 426\",\n                \"lat\": \"23.6916728\",\n                \"lng\": \"90.3564037\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 5814 Oma Mews\",\n                \"lat\": \"23.8194412\",\n                \"lng\": \"90.3475021\",\n                \"recipient\": \"Zaria Zieme\",\n                \"phone\": \"01851202198\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-03-19T15:57:58.000000Z\",\n            \"updated_at\": \"2026-04-29T02:29:25.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"tracking_number\": \"BD850525BC\",\n            \"status\": \"delivered\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Gulshan, Dhaka, 388 Parisian Courts\",\n                \"lat\": \"23.8849201\",\n                \"lng\": \"90.3732193\"\n            },\n            \"destination\": {\n                \"address\": \"Banani, Dhaka, 45067 Arturo Meadows Suite 561\",\n                \"lat\": \"23.7515625\",\n                \"lng\": \"90.3359400\",\n                \"recipient\": \"Mr. Lee Nikolaus II\",\n                \"phone\": \"01849100242\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": \"2026-06-17T13:50:27.000000Z\",\n            \"created_at\": \"2026-03-28T07:57:32.000000Z\",\n            \"updated_at\": \"2026-06-17T13:50:27.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"tracking_number\": \"BD606153ON\",\n            \"status\": \"failed\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 42454 Kane Wall Apt. 435\",\n                \"lat\": \"23.8900599\",\n                \"lng\": \"90.3811756\"\n            },\n            \"destination\": {\n                \"address\": \"Bashundhara, Dhaka, 68917 Kiara Creek\",\n                \"lat\": \"23.8838589\",\n                \"lng\": \"90.3763570\",\n                \"recipient\": \"Meta Kovacek\",\n                \"phone\": \"01379463473\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-21T01:26:42.000000Z\",\n            \"updated_at\": \"2026-02-21T01:26:42.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"tracking_number\": \"BD637338JS\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Lalbagh, Dhaka, 987 Walter Spurs\",\n                \"lat\": \"23.6536292\",\n                \"lng\": \"90.4234394\"\n            },\n            \"destination\": {\n                \"address\": \"Wari, Dhaka, 1220 Hintz Underpass Apt. 264\",\n                \"lat\": \"23.8123488\",\n                \"lng\": \"90.3692993\",\n                \"recipient\": \"Tamara Purdy\",\n                \"phone\": \"01833139173\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-11T12:10:31.000000Z\",\n            \"updated_at\": \"2026-06-11T21:09:11.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"tracking_number\": \"BD767138FT\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 3862 Bins Route Apt. 449\",\n                \"lat\": \"23.8931866\",\n                \"lng\": \"90.3760120\"\n            },\n            \"destination\": {\n                \"address\": \"Lalbagh, Dhaka, 8859 Gerard Manors\",\n                \"lat\": \"23.7906928\",\n                \"lng\": \"90.4424738\",\n                \"recipient\": \"Mr. Louisa Rempel\",\n                \"phone\": \"01507785216\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-02T04:03:58.000000Z\",\n            \"updated_at\": \"2026-02-20T17:25:16.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"tracking_number\": \"BD480816HC\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 20046 Pink Ports Suite 320\",\n                \"lat\": \"23.7914006\",\n                \"lng\": \"90.4990716\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 33594 Pagac Garden\",\n                \"lat\": \"23.7082478\",\n                \"lng\": \"90.4507012\",\n                \"recipient\": \"Yoshiko Schmitt\",\n                \"phone\": \"01771659915\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-29T16:20:44.000000Z\",\n            \"updated_at\": \"2026-01-29T16:20:44.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"tracking_number\": \"BD005877MC\",\n            \"status\": \"picked_up\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Wari, Dhaka, 927 Beer Lodge Apt. 988\",\n                \"lat\": \"23.7502768\",\n                \"lng\": \"90.3766054\"\n            },\n            \"destination\": {\n                \"address\": \"Dhanmondi, Dhaka, 7704 Oberbrunner Motorway\",\n                \"lat\": \"23.6768865\",\n                \"lng\": \"90.4745805\",\n                \"recipient\": \"Carlie Grady\",\n                \"phone\": \"01826908126\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-01-04T09:12:14.000000Z\",\n            \"updated_at\": \"2026-02-06T06:32:49.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"tracking_number\": \"BD420081MW\",\n            \"status\": \"pending\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Bashundhara, Dhaka, 33267 Brycen River\",\n                \"lat\": \"23.7369578\",\n                \"lng\": \"90.4523103\"\n            },\n            \"destination\": {\n                \"address\": \"Bashundhara, Dhaka, 918 Augustine Loaf Apt. 296\",\n                \"lat\": \"23.7954023\",\n                \"lng\": \"90.4621766\",\n                \"recipient\": \"Miss Destini Kassulke PhD\",\n                \"phone\": \"01785364810\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-02-21T07:37:04.000000Z\",\n            \"updated_at\": \"2026-02-21T07:37:04.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"tracking_number\": \"BD817889CO\",\n            \"status\": \"in_transit\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Gulshan, Dhaka, 495 Pierre Shores Apt. 325\",\n                \"lat\": \"23.7953262\",\n                \"lng\": \"90.4545969\"\n            },\n            \"destination\": {\n                \"address\": \"Mohammadpur, Dhaka, 7465 Odell Road\",\n                \"lat\": \"23.6912482\",\n                \"lng\": \"90.3764161\",\n                \"recipient\": \"Prof. Neil Howe DDS\",\n                \"phone\": \"01857958793\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2025-12-28T23:01:17.000000Z\",\n            \"updated_at\": \"2026-02-27T21:37:09.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"tracking_number\": \"BD178568YS\",\n            \"status\": \"assigned\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Motijheel, Dhaka, 1948 Bartell Expressway\",\n                \"lat\": \"23.6609892\",\n                \"lng\": \"90.3769524\"\n            },\n            \"destination\": {\n                \"address\": \"Wari, Dhaka, 874 Champlin Spur\",\n                \"lat\": \"23.8805168\",\n                \"lng\": \"90.4468807\",\n                \"recipient\": \"Caesar Renner\",\n                \"phone\": \"01808073967\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-06-01T19:34:17.000000Z\",\n            \"updated_at\": \"2026-06-01T19:34:17.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"tracking_number\": \"BD204972PF\",\n            \"status\": \"pending\",\n            \"assigned_agent\": null,\n            \"customer\": {\n                \"id\": 1,\n                \"name\": \"Admin User\",\n                \"email\": \"admin@example.com\",\n                \"phone\": \"01802649299\"\n            },\n            \"pickup\": {\n                \"address\": \"Lalbagh, Dhaka, 475 Doyle Oval\",\n                \"lat\": \"23.8518605\",\n                \"lng\": \"90.4995394\"\n            },\n            \"destination\": {\n                \"address\": \"Mirpur, Dhaka, 23076 Hansen Haven\",\n                \"lat\": \"23.6908271\",\n                \"lng\": \"90.3881060\",\n                \"recipient\": \"Dr. Malcolm Larson I\",\n                \"phone\": \"01380592975\"\n            },\n            \"scheduled_at\": null,\n            \"delivered_at\": null,\n            \"created_at\": \"2026-03-20T17:00:54.000000Z\",\n            \"updated_at\": \"2026-03-20T17:00:54.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": null,\n        \"last\": null,\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/v2/deliveries?cursor=eyJpZCI6MjAsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0\"\n    },\n    \"meta\": {\n        \"path\": \"http://127.0.0.1:8000/api/v2/deliveries\",\n        \"per_page\": 20,\n        \"next_cursor\": \"eyJpZCI6MjAsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0\",\n        \"prev_cursor\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "admin@example.com",
+                  "type": "text",
+                  "uuid": "40bf359e-e9ca-4eb7-bd06-ebf3d16e64f8"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "43c5ed85-a9d4-42ef-83da-b01c339a9939"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "email",
+                      "value": "admin@example.com",
+                      "type": "text",
+                      "uuid": "40bf359e-e9ca-4eb7-bd06-ebf3d16e64f8"
+                    },
+                    {
+                      "key": "password",
+                      "value": "password",
+                      "type": "text",
+                      "uuid": "43c5ed85-a9d4-42ef-83da-b01c339a9939"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/login",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:46:23 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"token\": \"8|bK0lGAPaIY1c8zd5tw1v4lXPTsYT8KAPfZjhmKw21bc9bf43\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Admin User\",\n        \"email\": \"admin@example.com\",\n        \"role\": \"admin\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "show first delivery",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Tenant-Key",
+                "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE}}/deliveries/1",
+              "host": [
+                "{{BASE}}"
+              ],
+              "path": [
+                "deliveries",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "X-Tenant-Key",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "show first delivery",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE}}/deliveries/1",
+                  "host": [
+                    "{{BASE}}"
+                  ],
+                  "path": [
+                    "deliveries",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 06:48:00 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"tracking_number\": \"BD394258ZW\",\n        \"status\": \"delivered\",\n        \"assigned_agent\": null,\n        \"customer\": {\n            \"id\": 1,\n            \"name\": \"Admin User\",\n            \"email\": \"admin@example.com\",\n            \"phone\": \"01802649299\"\n        },\n        \"pickup\": {\n            \"address\": \"Dhanmondi, Dhaka, 650 Hilpert Flat\",\n            \"lat\": \"23.8457527\",\n            \"lng\": \"90.3313256\"\n        },\n        \"destination\": {\n            \"address\": \"Mohammadpur, Dhaka, 194 Howe Alley\",\n            \"lat\": \"23.7510742\",\n            \"lng\": \"90.4293226\",\n            \"recipient\": \"Roxane Hill\",\n            \"phone\": \"01793203081\"\n        },\n        \"scheduled_at\": null,\n        \"delivered_at\": \"2026-06-19T12:13:28.000000Z\",\n        \"created_at\": \"2026-06-15T07:57:20.000000Z\",\n        \"updated_at\": \"2026-06-19T12:13:28.000000Z\"\n    }\n}"
+            },
+            {
+              "name": "show first delivery",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Tenant-Key",
+                    "value": "XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{BASE}}/deliveries/1",
+                  "host": [
+                    "{{BASE}}"
+                  ],
+                  "path": [
+                    "deliveries",
+                    "1"
+                  ],
+                  "query": [
+                    {
+                      "key": "X-Tenant-Key",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.1"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 27 Jun 2026 07:25:53 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "27"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"tracking_number\": \"BD394258ZW\",\n        \"status\": \"delivered\",\n        \"assigned_agent\": null,\n        \"customer\": {\n            \"id\": 1,\n            \"name\": \"Admin User\",\n            \"email\": \"admin@example.com\",\n            \"phone\": \"01802649299\"\n        },\n        \"pickup\": {\n            \"address\": \"Dhanmondi, Dhaka, 650 Hilpert Flat\",\n            \"lat\": \"23.8457527\",\n            \"lng\": \"90.3313256\"\n        },\n        \"destination\": {\n            \"address\": \"Mohammadpur, Dhaka, 194 Howe Alley\",\n            \"lat\": \"23.7510742\",\n            \"lng\": \"90.4293226\",\n            \"recipient\": \"Roxane Hill\",\n            \"phone\": \"01793203081\"\n        },\n        \"scheduled_at\": null,\n        \"delivered_at\": \"2026-06-19T12:13:28.000000Z\",\n        \"created_at\": \"2026-06-15T07:57:20.000000Z\",\n        \"updated_at\": \"2026-06-19T12:13:28.000000Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "9|ydluU75GnHQXAkeI1HlcBOCRA7j86BTlIWMcAAEa58f16725",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE",
+      "value": ""
+    }
+  ]
+}
