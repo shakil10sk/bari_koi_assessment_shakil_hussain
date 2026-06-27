@@ -122,7 +122,23 @@ Authorization: Bearer {token}
 |--------|-------|
 | `Authorization` | `Bearer {token}` |
 | `Accept` | `application/json` |
-| `X-Tenant-Key` | `{tenant_api_key}` |
+| `X-Tenant-Key` | `{tenant_api_key}` — see below |
+
+#### How to get the Tenant API Key
+
+The `X-Tenant-Key` is stored in the `tenants` table and is randomly generated on each `db:seed`. After seeding, run this to print all tenant keys:
+
+```bash
+php artisan tinker --execute="App\Models\Tenant::all(['name','api_key'])->each(fn(\$t) => print(\$t->name.' => '.\$t->api_key.\"\n\"));"
+```
+
+Example output:
+```
+Swift Logistics BD      => QntLNfi8seHNBJSbsqNucgGjXq5cr7V6KOYjjzxkP8XtAHpBqDZMIvM8UT5jHVT3
+Dhaka Express Delivery  => uwKHqRwjK7Vvk0t9NUtEt0pdHlK2ZJcYmc4dHLJt7ljsyESRUADHcaqDVeIilMTQ
+```
+
+> `admin@example.com` belongs to **Swift Logistics BD** — use that key when testing with the admin account.
 
 ### V1 Endpoints (Deprecated — include `Deprecation` / `Sunset` headers)
 

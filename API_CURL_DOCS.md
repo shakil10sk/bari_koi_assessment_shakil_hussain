@@ -40,7 +40,30 @@ Copy the token and set these variables before running any request below:
 ```bash
 BASE=http://localhost:8000/api
 TOKEN=your_token_here
-TENANT_KEY=XwQdYMlllnvpfTyuvX0GOYiJAEzGdAgSCGtvz1f0o58ozGBz0AIetHa0zlUMW45e
+TENANT_KEY=your_tenant_api_key_here   # see "How to get your Tenant Key" below
+```
+
+### How to get your Tenant Key
+
+The `X-Tenant-Key` is the `api_key` column from the `tenants` table. It is generated randomly when you run `db:seed`, so the value changes every time you re-seed. Always fetch it fresh from the database:
+
+```bash
+# List all tenants with their API keys
+php artisan tinker --execute="App\Models\Tenant::all(['name','api_key'])->each(fn(\$t) => print(\$t->name.' => '.\$t->api_key.\"\n\"));"
+```
+
+Example output:
+```
+Swift Logistics BD      => QntLNfi8seHNBJSbsqNucgGjXq5cr7V6KOYjjzxkP8XtAHpBqDZMIvM8UT5jHVT3
+Dhaka Express Delivery  => uwKHqRwjK7Vvk0t9NUtEt0pdHlK2ZJcYmc4dHLJt7ljsyESRUADHcaqDVeIilMTQ
+```
+
+> **Note:** `admin@example.com` belongs to **Swift Logistics BD**, so use that tenant's key when testing with the admin account.
+
+Copy the key for your chosen tenant and set it:
+
+```bash
+TENANT_KEY=QntLNfi8seHNBJSbsqNucgGjXq5cr7V6KOYjjzxkP8XtAHpBqDZMIvM8UT5jHVT3
 ```
 
 All requests require:
