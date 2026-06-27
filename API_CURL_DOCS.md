@@ -1,12 +1,39 @@
 # API Curl Reference
 
-## Getting a Sanctum Token (one-time setup)
+## Authentication
 
-There is no public login endpoint — generate a token via Tinker:
+### Option A — Login endpoint (recommended)
+
+```bash
+curl -X POST "$BASE/login" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{"email": "admin@example.com", "password": "password"}'
+```
+
+Response:
+```json
+{
+  "token": "1|abc123...",
+  "user": { "id": 1, "name": "Admin", "email": "admin@example.com", "role": "admin" }
+}
+```
+
+### Option B — Tinker (dev shortcut)
 
 ```bash
 php artisan tinker --execute="echo \App\Models\User::where('email','admin@example.com')->first()->createToken('test')->plainTextToken;"
 ```
+
+### Logout
+
+```bash
+curl -X POST "$BASE/logout" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Accept: application/json"
+```
+
+---
 
 Copy the token and set these variables before running any request below:
 

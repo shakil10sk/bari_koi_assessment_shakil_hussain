@@ -100,9 +100,29 @@ All endpoints require `Authorization: Bearer {token}` from Sanctum.
 
 ### Authentication
 
+```bash
+# Login — returns a Sanctum token
+POST /api/login
+Content-Type: application/json
+{"email": "admin@example.com", "password": "password"}
+
+# Logout — revokes the current token
+POST /api/logout
+Authorization: Bearer {token}
 ```
-POST /api/sanctum/token
-```
+
+> **Dev shortcut:** generate a token directly via Tinker if you don't want to call the login endpoint:
+> ```bash
+> php artisan tinker --execute="echo \App\Models\User::where('email','admin@example.com')->first()->createToken('test')->plainTextToken;"
+> ```
+
+### Required Headers (all v1 / v2 routes)
+
+| Header | Value |
+|--------|-------|
+| `Authorization` | `Bearer {token}` |
+| `Accept` | `application/json` |
+| `X-Tenant-Key` | `{tenant_api_key}` |
 
 ### V1 Endpoints (Deprecated — include `Deprecation` / `Sunset` headers)
 
@@ -111,29 +131,32 @@ POST /api/sanctum/token
 | GET | `/api/v1/deliveries` | Cursor-paginated deliveries |
 | POST | `/api/v1/deliveries` | Create delivery |
 | GET | `/api/v1/deliveries/{id}` | Get delivery |
-| PATCH | `/api/v1/deliveries/{id}` | Update delivery |
+| PUT | `/api/v1/deliveries/{id}` | Update delivery status / fields |
 | DELETE | `/api/v1/deliveries/{id}` | Soft-delete delivery |
 | POST | `/api/v1/imports` | Upload CSV for background import |
 | GET | `/api/v1/imports/{id}` | Import job progress |
 | POST | `/api/v1/reports/weekly` | Queue weekly report generation |
 | GET | `/api/v1/reports/{key}/status` | Poll report status |
 | POST | `/api/v1/exports/deliveries` | Queue CSV export |
-| GET | `/api/v1/exports/{key}/status` | Poll export + download URL |
-| GET/POST/PUT/DELETE | `/api/v1/routes` | Tenant delivery routes (cached) |
+| GET | `/api/v1/exports/{key}/status` | Poll export status + signed download URL |
+| GET | `/api/v1/exports/{key}/download` | Download the exported CSV (signed URL) |
+| GET | `/api/v1/routes` | List tenant delivery routes (cached) |
+| POST | `/api/v1/routes` | Create a route |
+| GET | `/api/v1/routes/{id}` | Get a route |
+| PUT | `/api/v1/routes/{id}` | Update a route |
+| DELETE | `/api/v1/routes/{id}` | Delete a route |
 
 ### V2 Endpoints (Current)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/api/v2/deliveries` | Cursor-paginated (nested `assigned_agent`) |
-| POST | `/api/v2/deliveries` | Create delivery |
+| POST | `/api/v2/deliveries` | Create delivery (supports `driver_id`) |
 | GET | `/api/v2/deliveries/{id}` | Full nested structure |
-| PATCH | `/api/v2/deliveries/{id}` | Update delivery |
+| PUT | `/api/v2/deliveries/{id}` | Update delivery / reassign driver |
 | DELETE | `/api/v2/deliveries/{id}` | Soft-delete delivery |
 
-### Tenant Authentication
-
-Include `X-Tenant-Key: {api_key}` header on routes that use `TenantMiddleware`.
+> See `API_CURL_DOCS.md` for ready-to-run `curl` examples for every endpoint above.
 
 ### Cursor Pagination Response
 
